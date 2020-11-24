@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './models/monthly_master.dart';
+import './widgets/montly_master.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,13 +37,7 @@ class MyHomePage extends StatelessWidget {
           children: [
             Column(
               children: monthlymaser.map((mm) {
-                return Row(
-                  children: [
-                    Icon(Icons.folder),
-                    Text(mm.year.toString() + "年" + mm.month.toString() + "月"),
-                    Text(">"),
-                  ],
-                );
+                return MonthlyMasterW(year: mm.year, month: mm.month);
               }).toList(),
             ),
           ],
