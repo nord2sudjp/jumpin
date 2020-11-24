@@ -23,6 +23,7 @@ class MyHomePage extends StatelessWidget {
     MonthlyMaster(year: 2020, month: 5),
     MonthlyMaster(year: 2020, month: 4),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,10 +34,17 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Card(
-              color: Colors.red,
-              child: Text('List of txt'),
-            )
+            Column(
+              children: monthlymaser.map((mm) {
+                return Row(
+                  children: [
+                    Icon(Icons.folder),
+                    Text(mm.year.toString() + "年" + mm.month.toString() + "月"),
+                    Text(">"),
+                  ],
+                );
+              }).toList(),
+            ),
           ],
         ));
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 
 class MonthlyMaster {
-  double year;
-  double month;
+  int year;
+  int month;
   MonthlyMaster({
     @required this.year,
     @required this.month,
