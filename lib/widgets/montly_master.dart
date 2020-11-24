@@ -7,12 +7,10 @@ class MonthlyMasterW extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(Icons.folder),
-        Text(year.toString() + "年" + month.toString() + "月"),
-        Text(">"),
-      ],
+    return ListTile(
+      leading: Icon(Icons.folder_open_outlined),
+      title: Text(year.toString() + "年" + month.toString() + "月"),
+      trailing: Icon(Icons.arrow_forward_ios),
     );
   }
 }
