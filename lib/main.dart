@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './models/monthly_master.dart';
-import './widgets/montly_master.dart';
+import 'widgets/montly_header.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +23,16 @@ class MyHomePage extends StatelessWidget {
     MonthlyMaster(year: 2020, month: 6),
     MonthlyMaster(year: 2020, month: 5),
     MonthlyMaster(year: 2020, month: 4),
+    MonthlyMaster(year: 2020, month: 8),
+    MonthlyMaster(year: 2020, month: 7),
+    MonthlyMaster(year: 2020, month: 6),
+    MonthlyMaster(year: 2020, month: 5),
+    MonthlyMaster(year: 2020, month: 4),
+    MonthlyMaster(year: 2020, month: 8),
+    MonthlyMaster(year: 2020, month: 7),
+    MonthlyMaster(year: 2020, month: 6),
+    MonthlyMaster(year: 2020, month: 5),
+    MonthlyMaster(year: 2020, month: 4),
   ];
 
   @override
@@ -37,7 +47,7 @@ class MyHomePage extends StatelessWidget {
           children: [
             Column(
               children: monthlymaser.map((mm) {
-                return MonthlyMasterW(year: mm.year, month: mm.month);
+                return MonthlyHeader(year: mm.year, month: mm.month);
               }).toList(),
             ),
           ],
