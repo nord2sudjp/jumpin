@@ -106,10 +106,30 @@ class MyHomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
+                height: (MX.size.height -
+                        appBar.preferredSize.height -
+                        MX.padding.top) *
+                    0.1,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("マンスリー課題",
+                          style:
+                              TextStyle(fontSize: 15, color: Colors.red[400])),
+                      Text("テープ課題",
+                          style:
+                              TextStyle(fontSize: 15, color: Colors.red[400])),
+                      Text("特別課題",
+                          style:
+                              TextStyle(fontSize: 15, color: Colors.red[400]))
+                    ]),
+              ),
+              Container(
                   height: (MX.size.height -
                           appBar.preferredSize.height -
                           MX.padding.top) *
-                      0.95,
+                      0.9,
                   child: MonthlyHeader(monthlymaster: monthlymaster)),
             ],
           ),
