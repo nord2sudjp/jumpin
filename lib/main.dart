@@ -65,7 +65,16 @@ class MyHomePage extends StatelessWidget {
               "課題",
               textAlign: TextAlign.center,
             ),
-            actions: <Widget>[]);
+            actions: <Widget>[
+                SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: IconButton(
+                      padding: new EdgeInsets.all(0.0),
+                      icon: Icon(Icons.person, size: 52.0),
+                      onPressed: null),
+                )
+              ]);
     return Scaffold(
         appBar: appBar,
         body: SingleChildScrollView(
