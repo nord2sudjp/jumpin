@@ -12,7 +12,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Jump In!',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
+        fontFamily: 'QuickSand',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18),
+              button: TextStyle(color: Colors.white),
+            ),
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(fontFamily: 'OpenSans', fontSize: 20),
+              ),
+        ),
+      ),
       home: MyHomePage(),
     );
   }
@@ -43,7 +60,12 @@ class MyHomePage extends StatelessWidget {
     final isLandscape = MX.orientation == Orientation.landscape;
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar()
-        : AppBar(title: Text("課題1"), actions: <Widget>[]);
+        : AppBar(
+            title: Text(
+              "課題",
+              textAlign: TextAlign.center,
+            ),
+            actions: <Widget>[]);
     return Scaffold(
         appBar: appBar,
         body: SingleChildScrollView(
