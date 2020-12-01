@@ -52,7 +52,10 @@ class MyHomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                  height: 400,
+                  height: (MX.size.height -
+                          appBar.preferredSize.height -
+                          MX.padding.top) *
+                      0.95,
                   child: MonthlyHeader(monthlymaster: monthlymaster)),
             ],
           ),
