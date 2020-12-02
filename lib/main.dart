@@ -135,18 +135,27 @@ class MyHomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: null,
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Theme.of(context).primaryColor,
         unselectedItemColor: Colors.white,
         selectedItemColor: Theme.of(context).accentColor,
         currentIndex: _selectPageIndex,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.category),
-            label: 'Categories',
+            icon: Icon(Icons.timeline),
+            label: '課題',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Favorites',
+            icon: Icon(Icons.home),
+            label: 'ホームページ',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.camera_alt),
+            label: 'Instagram',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.email),
+            label: '通知',
           ),
         ],
       ),
