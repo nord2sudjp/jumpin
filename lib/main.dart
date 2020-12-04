@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:jumpin/screen/homepage_screen.dart';
 import 'screen/route_view_screen.dart';
 
 void main() {
@@ -61,6 +62,7 @@ class _MyAppState extends State<MyApp> {
         routes: {
           '/': (ctx) => RouteViewScreen(),
           RouteViewScreen.routeName: (ctr) => RouteViewScreen(),
+          HomepageScreen.routeName: (ctr) => HomepageScreen(),
         });
   }
 }

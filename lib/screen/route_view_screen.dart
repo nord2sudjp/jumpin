@@ -4,7 +4,7 @@ import '../models/monthly_master.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
 
-import '../widgets/header_menu.dart';
+import '../widgets/header_menu_route.dart';
 import '../widgets/bottom_navi.dart';
 
 class RouteViewScreen extends StatelessWidget {
@@ -61,7 +61,7 @@ class RouteViewScreen extends StatelessWidget {
                       appBar.preferredSize.height -
                       MX.padding.top) *
                   0.1,
-              child: HeaderMenu(),
+              child: HeaderMenuRoute(),
             ),
             Container(
                 height: (MX.size.height -
