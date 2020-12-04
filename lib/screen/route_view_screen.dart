@@ -5,8 +5,9 @@ import 'package:flutter/cupertino.dart';
 import 'dart:io';
 
 import '../widgets/header_menu.dart';
+import '../widgets/bottom_navi.dart';
 
-class MonthlyViewScreen extends StatelessWidget {
+class RouteViewScreen extends StatelessWidget {
   static const routeName = './monthly-view';
 
   final List<MonthlyMaster> monthlymaster = [
@@ -29,8 +30,6 @@ class MonthlyViewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int _selectPageIndex = 0;
-
     final MX = MediaQuery.of(context);
     final isLandscape = MX.orientation == Orientation.landscape;
     final PreferredSizeWidget appBar = Platform.isIOS
@@ -73,32 +72,7 @@ class MonthlyViewScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: null,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Theme.of(context).accentColor,
-        currentIndex: _selectPageIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.timeline),
-            label: '課題',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'ホームページ',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera_alt),
-            label: 'Instagram',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.email),
-            label: '通知',
-          ),
-        ],
-      ),
+      bottomNavigationBar: BottomNavi(0),
     );
   }
 }

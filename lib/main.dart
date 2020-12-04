@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import './screen/monthly_view_screen.dart';
+import 'screen/route_view_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,8 +59,8 @@ class _MyAppState extends State<MyApp> {
         ),
         initialRoute: '/',
         routes: {
-          '/': (ctx) => MonthlyViewScreen(),
-          MonthlyViewScreen.routeName: (ctr) => MonthlyViewScreen(),
+          '/': (ctx) => RouteViewScreen(),
+          RouteViewScreen.routeName: (ctr) => RouteViewScreen(),
         });
   }
 }
