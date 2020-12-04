@@ -36,7 +36,6 @@ class HomepageScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavi(1),
     );
   }
 }
