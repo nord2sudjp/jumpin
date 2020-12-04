@@ -9,9 +9,9 @@ class BottomNavi extends StatelessWidget {
     return BottomNavigationBar(
       onTap: null,
       type: BottomNavigationBarType.fixed,
-      backgroundColor: Theme.of(context).primaryColor,
-      unselectedItemColor: Colors.white,
-      selectedItemColor: Theme.of(context).accentColor,
+      backgroundColor: Colors.white,
+      unselectedItemColor: Colors.black,
+      selectedItemColor: Theme.of(context).primaryColor,
       currentIndex: _selectPageIndex,
       items: [
         BottomNavigationBarItem(
