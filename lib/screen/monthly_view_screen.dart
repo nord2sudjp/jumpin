@@ -4,6 +4,8 @@ import '../models/monthly_master.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
 
+import '../widgets/header_menu.dart';
+
 class MonthlyViewScreen extends StatelessWidget {
   static const routeName = './monthly-view';
 
@@ -60,17 +62,7 @@ class MonthlyViewScreen extends StatelessWidget {
                       appBar.preferredSize.height -
                       MX.padding.top) *
                   0.1,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text("マンスリー課題",
-                        style: TextStyle(fontSize: 15, color: Colors.red[400])),
-                    Text("テープ課題",
-                        style: TextStyle(fontSize: 15, color: Colors.red[400])),
-                    Text("特別課題",
-                        style: TextStyle(fontSize: 15, color: Colors.red[400]))
-                  ]),
+              child: HeaderMenu(),
             ),
             Container(
                 height: (MX.size.height -
