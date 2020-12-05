@@ -17,9 +17,13 @@ class _SampleTabScreenState extends State<SampleTabScreen> {
       length: _tab.length,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('TabBar'),
-          bottom: TabBar(
-            tabs: _tab,
+          flexibleSpace: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              TabBar(
+                tabs: _tab,
+              ),
+            ],
           ),
         ),
         body: TabBarView(children: <Widget>[
