@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jumpin/screen/homepage_screen.dart';
 import 'package:jumpin/screen/route_view_screen.dart';
+import './SampleTabScreen.dart';
 import '../models/monthly_master.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
@@ -44,6 +45,7 @@ class _TabScreenState extends State<TabScreen> {
     _pages = [
       {'page': RouteViewScreen(), 'title': '課題'},
       {'page': HomepageScreen(), 'title': 'ホームページ'},
+      {'page': SampleTabScreen(), 'title': 'サンプルタブ'},
     ];
     super.initState();
   }
