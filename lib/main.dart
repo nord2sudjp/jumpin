@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:jumpin/screen/homepage_screen.dart';
 import 'screen/tab_screen.dart';
+import 'widgets/monthly_routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -63,6 +64,7 @@ class _MyAppState extends State<MyApp> {
           '/': (ctx) => TabScreen(),
           TabScreen.routeName: (ctr) => TabScreen(),
           HomepageScreen.routeName: (ctr) => HomepageScreen(),
+          MonthlyRoutes.routeName: (ctr) => MonthlyRoutes(),
         });
   }
 }
