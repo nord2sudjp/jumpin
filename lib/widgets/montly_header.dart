@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/monthly_master.dart';
-import 'monthly_routes.dart';
+import '../screen/monthly_routes_screen.dart';
 
 class MonthlyHeader extends StatelessWidget {
   //final int year;
@@ -18,8 +18,13 @@ class MonthlyHeader extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 4, horizontal: 5),
             elevation: 1,
             child: ListTile(
-              onTap: () =>
-                  {Navigator.of(context).pushNamed(MonthlyRoutes.routeName)},
+              onTap: () => {
+                Navigator.of(context).pushNamed(MonthlyRoutesScreen.routeName,
+                    arguments: {
+                      "year": monthlymaster[index].year,
+                      "month": monthlymaster[index].month
+                    })
+              },
               leading: Icon(Icons.folder_open_outlined),
               title: Text(monthlymaster[index].year.toString() +
                   "年" +
