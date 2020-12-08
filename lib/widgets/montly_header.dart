@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import '../models/monthly_master.dart';
+import 'package:jumpin/models/monthly_master.dart';
+import '../models/year_month.dart';
 import '../screen/monthly_routes_screen.dart';
 
 class MonthlyHeader extends StatelessWidget {
   //final int year;
   //final int month;
-  final List<MonthlyMaster> monthlymaster;
+  final List<YearMonth> monthlymaster = MonthlyMaster.items;
 
-  MonthlyHeader({this.monthlymaster});
+  MonthlyHeader();
 
   @override
   Widget build(BuildContext context) {

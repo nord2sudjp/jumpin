@@ -18,7 +18,23 @@ class MonthlyRoutesScreen extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
       ),
-      body: Text("課題" + this.year.toString() + "/" + this.month.toString()),
+      body: GridView(
+        padding: const EdgeInsets.all(25),
+        children: List.generate(100, (index) {
+          return Center(
+            child: Text(
+              'Item $index',
+              style: Theme.of(context).textTheme.headline,
+            ),
+          );
+        }),
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+      ),
     );
   }
 }

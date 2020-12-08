@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jumpin/screen/homepage_screen.dart';
 import 'route_screen.dart';
-import '../models/monthly_master.dart';
+import '../models/year_month.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
 
@@ -13,23 +13,7 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
-  final List<MonthlyMaster> monthlymaster = [
-    MonthlyMaster(year: 2020, month: 8),
-    MonthlyMaster(year: 2020, month: 7),
-    MonthlyMaster(year: 2020, month: 6),
-    MonthlyMaster(year: 2020, month: 5),
-    MonthlyMaster(year: 2020, month: 4),
-    MonthlyMaster(year: 2020, month: 8),
-    MonthlyMaster(year: 2020, month: 7),
-    MonthlyMaster(year: 2020, month: 6),
-    MonthlyMaster(year: 2020, month: 5),
-    MonthlyMaster(year: 2020, month: 4),
-    MonthlyMaster(year: 2020, month: 8),
-    MonthlyMaster(year: 2020, month: 7),
-    MonthlyMaster(year: 2020, month: 6),
-    MonthlyMaster(year: 2020, month: 5),
-    MonthlyMaster(year: 2020, month: 4),
-  ];
+  //final List<YearMonth> monthlymaster = MonthlyMaster.items;
   int _selectPageIndex = 0;
 
   List<Map<String, Object>> _pages;

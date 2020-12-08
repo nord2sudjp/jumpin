@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
-import '../models/monthly_master.dart';
+import '../models/year_month.dart';
 import '../widgets/montly_header.dart';
+import '../models/monthly_master.dart';
 
 class RouteScreen extends StatefulWidget {
   static const routeName = './route-view';
@@ -11,23 +12,8 @@ class RouteScreen extends StatefulWidget {
 
 class _RouteScreenState extends State<RouteScreen>
     with SingleTickerProviderStateMixin {
-  final List<MonthlyMaster> monthlymaster = [
-    MonthlyMaster(year: 2020, month: 8),
-    MonthlyMaster(year: 2020, month: 7),
-    MonthlyMaster(year: 2020, month: 6),
-    MonthlyMaster(year: 2020, month: 5),
-    MonthlyMaster(year: 2020, month: 4),
-    MonthlyMaster(year: 2020, month: 8),
-    MonthlyMaster(year: 2020, month: 7),
-    MonthlyMaster(year: 2020, month: 6),
-    MonthlyMaster(year: 2020, month: 5),
-    MonthlyMaster(year: 2020, month: 4),
-    MonthlyMaster(year: 2020, month: 8),
-    MonthlyMaster(year: 2020, month: 7),
-    MonthlyMaster(year: 2020, month: 6),
-    MonthlyMaster(year: 2020, month: 5),
-    MonthlyMaster(year: 2020, month: 4),
-  ];
+  final List<YearMonth> monthlymaster = MonthlyMaster.items;
+
   TabController _tabController;
 
   @override
@@ -73,7 +59,7 @@ class _RouteScreenState extends State<RouteScreen>
         ),
       ),
       body: TabBarView(controller: _tabController, children: <Widget>[
-        MonthlyHeader(monthlymaster: monthlymaster),
+        MonthlyHeader(),
         TabPage(title: 'テープ課題'),
         TabPage(title: '特別課題'),
       ]),
