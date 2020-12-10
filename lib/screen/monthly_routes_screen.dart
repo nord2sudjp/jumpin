@@ -19,20 +19,27 @@ class MonthlyRoutesScreen extends StatelessWidget {
         ),
       ),
       body: GridView(
-        padding: const EdgeInsets.all(25),
+        padding: EdgeInsets.all(16),
         children: List.generate(100, (index) {
-          return Center(
-            child: Text(
-              'Item $index',
-              style: Theme.of(context).textTheme.headline,
-            ),
-          );
+          return Card(
+              color: Colors.orange,
+              child: Center(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Expanded(
+                          child: Icon(
+                        Icons.bookmark_border,
+                        size: 50.0,
+                      )),
+                      Text('$index'),
+                    ]),
+              ));
         }),
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4,
+          crossAxisSpacing: 16.0,
+          mainAxisSpacing: 16.0,
         ),
       ),
     );
