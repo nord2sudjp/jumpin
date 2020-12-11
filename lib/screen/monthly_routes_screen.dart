@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/route_icon.dart';
 
 class MonthlyRoutesScreen extends StatelessWidget {
   int year;
@@ -21,20 +22,7 @@ class MonthlyRoutesScreen extends StatelessWidget {
       body: GridView(
         padding: EdgeInsets.all(16),
         children: List.generate(100, (index) {
-          return Card(
-              color: Colors.orange,
-              child: Center(
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                          child: Icon(
-                        Icons.bookmark_border,
-                        size: 50.0,
-                      )),
-                      Text('$index'),
-                    ]),
-              ));
+          return RouteIcon(index, 4, 'Maka');
         }),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
