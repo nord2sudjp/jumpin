@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jumpin/models/monthly_master.dart';
 import '../models/year_month.dart';
-import '../screen/monthly_routes_screen.dart';
+import '../screen/monthly_routes_overview_screen.dart';
 
 class MonthlyHeader extends StatelessWidget {
   //final int year;
@@ -20,7 +20,8 @@ class MonthlyHeader extends StatelessWidget {
             elevation: 1,
             child: ListTile(
               onTap: () => {
-                Navigator.of(context).pushNamed(MonthlyRoutesScreen.routeName,
+                Navigator.of(context).pushNamed(
+                    MonthlyRoutesOverviewScreen.routeName,
                     arguments: {
                       "year": monthlymaster[index].year,
                       "month": monthlymaster[index].month

@@ -4,14 +4,14 @@ import 'dart:async';
 import 'dart:io';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class HomepageScreen extends StatefulWidget {
+class MenuHomepageScreen extends StatefulWidget {
   static const routeName = './homepage';
 
   @override
-  _HomepageScreenState createState() => _HomepageScreenState();
+  _MenuHomepageScreenState createState() => _MenuHomepageScreenState();
 }
 
-class _HomepageScreenState extends State<HomepageScreen> {
+class _MenuHomepageScreenState extends State<MenuHomepageScreen> {
   final Completer _controller = Completer();
 
   var connectionStatus;

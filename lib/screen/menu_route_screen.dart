@@ -3,14 +3,14 @@ import '../models/year_month.dart';
 import '../widgets/montly_header.dart';
 import '../models/monthly_master.dart';
 
-class RouteScreen extends StatefulWidget {
+class MenuRouteScreen extends StatefulWidget {
   static const routeName = './route-view';
 
   @override
-  _RouteScreenState createState() => _RouteScreenState();
+  _MenuRouteScreenState createState() => _MenuRouteScreenState();
 }
 
-class _RouteScreenState extends State<RouteScreen>
+class _MenuRouteScreenState extends State<MenuRouteScreen>
     with SingleTickerProviderStateMixin {
   final List<YearMonth> monthlymaster = MonthlyMaster.items;
 

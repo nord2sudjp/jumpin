@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/route_icon.dart';
 
-class MonthlyRoutesScreen extends StatelessWidget {
+class MonthlyRoutesOverviewScreen extends StatelessWidget {
   int year;
   int month;
 

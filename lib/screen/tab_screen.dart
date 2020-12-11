@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jumpin/screen/homepage_screen.dart';
-import 'route_screen.dart';
+import 'package:jumpin/screen/menu_homepage_screen.dart';
+import 'menu_route_screen.dart';
 import '../models/year_month.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
@@ -26,9 +26,9 @@ class _TabScreenState extends State<TabScreen> {
 
   void initState() {
     _pages = [
-      {'page': RouteScreen(), 'title': '課題'},
-      {'page': HomepageScreen(), 'title': 'ホームページ'},
-      {'page': RouteScreen(), 'title': '課題'},
+      {'page': MenuRouteScreen(), 'title': '課題'},
+      {'page': MenuHomepageScreen(), 'title': 'ホームページ'},
+      {'page': MenuRouteScreen(), 'title': '課題'},
     ];
     super.initState();
   }
