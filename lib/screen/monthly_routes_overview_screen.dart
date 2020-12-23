@@ -17,6 +17,7 @@ class MonthlyRoutesOverviewScreen extends StatelessWidget {
     this.month = arg['month'];
     return Scaffold(
       appBar: AppBar(
+          centerTitle: true,
           leading: Builder(
             builder: (BuildContext context) {
               return Row(
@@ -27,7 +28,7 @@ class MonthlyRoutesOverviewScreen extends StatelessWidget {
                       Navigator.maybePop<String>(context, '');
                     },
                   ),
-                  Text("課題"),
+                  //Text("課題"),
                 ],
               );
             },

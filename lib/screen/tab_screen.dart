@@ -40,6 +40,7 @@ class _TabScreenState extends State<TabScreen> {
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar()
         : AppBar(
+            centerTitle: true,
             title: Text(
               _pages[_selectPageIndex]['title'],
               textAlign: TextAlign.center,
