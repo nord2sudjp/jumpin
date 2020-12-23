@@ -12,27 +12,31 @@ class RouteIcon extends StatelessWidget {
     return Card(
         color: Colors.orange,
         child: Center(
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.only(left: 5, right: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text(this.route_id.toString()),
-                      //Expanded(child: Container(color: Colors.blue)),
-                      Text(this.grade.toString() + "級")
-                    ],
+          child: InkWell(
+            onTap: () => print("Tapped"),
+            splashColor: Theme.of(context).primaryColor,
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(left: 5, right: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Text(this.route_id.toString()),
+                        //Expanded(child: Container(color: Colors.blue)),
+                        Text(this.grade.toString() + "級")
+                      ],
+                    ),
                   ),
-                ),
-                Expanded(
-                    child: Icon(
-                  Icons.bookmark_border,
-                  size: 50.0,
-                )),
-                Text(creator),
-              ]),
+                  Expanded(
+                      child: Icon(
+                    Icons.bookmark_border,
+                    size: 50.0,
+                  )),
+                  Text(creator),
+                ]),
+          ),
         ));
   }
 }
