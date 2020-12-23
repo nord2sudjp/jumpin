@@ -15,6 +15,7 @@ class MonthlyRoutesOverviewScreen extends StatelessWidget {
     print(arg['year'] + arg['month']);
     this.year = arg['year'];
     this.month = arg['month'];
+
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
@@ -49,7 +50,7 @@ class MonthlyRoutesOverviewScreen extends StatelessWidget {
       body: GridView(
         padding: EdgeInsets.all(16),
         children: List.generate(100, (index) {
-          return RouteIcon(index, 4, 'Maka');
+          return RouteIcon(year, month, index, 4, 'Maka');
         }),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
