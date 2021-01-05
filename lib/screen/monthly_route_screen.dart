@@ -14,6 +14,23 @@ class MonthlyRouteScreen extends StatelessWidget {
     this.id = arg['id'];
     this.year = arg['year'];
     this.month = arg['month'];
-    return Text("Route");
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("課題" + id.toString()),
+      ),
+      body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text("難易度:非公開"),
+            Text("一足", style: TextStyle(backgroundColor: Colors.grey)),
+            Expanded(
+              child: FittedBox(
+                fit: BoxFit.contain, // otherwise the logo will be tiny
+                child: const FlutterLogo(),
+              ),
+            ),
+          ]),
+    );
   }
 }
