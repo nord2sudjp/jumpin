@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jumpin/screen/menu_homepage_screen.dart';
 import 'menu_route_screen.dart';
 import '../models/year_month.dart';
+import '../widgets/bottom_navigation.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
 
@@ -58,32 +59,7 @@ class _TabScreenState extends State<TabScreen> {
     return Scaffold(
       appBar: appBar,
       body: _pages[_selectPageIndex]['page'],
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: _selectPage,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        unselectedItemColor: Colors.black,
-        selectedItemColor: Theme.of(context).primaryColor,
-        currentIndex: _selectPageIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.timeline),
-            label: '課題',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'ホームページ',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera_alt),
-            label: 'Instagram',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.email),
-            label: '通知',
-          ),
-        ],
-      ),
+      bottomNavigationBar: BottomNavigation(),
     );
   }
 }
